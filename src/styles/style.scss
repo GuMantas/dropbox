@@ -1,0 +1,66 @@
+@import 'variables.scss';
+
+body {
+    background-image: url('../img/BG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
+main {
+    width: 900px;
+    height: 600px;
+    box-shadow: 5px 5px rgba(0, 0 , 0, .2);
+background-color: white;
+
+}
+
+nav {
+       height: 100%;
+    width: 145px;
+    background-color: $left-background;
+    margin: 0 !important;
+}
+
+.left {
+   
+    
+ .logo>img {
+     margin-top: 10px;
+ }
+ img:nth-child(4){
+     margin-left: 5px ;
+ }
+    .icon {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+margin-left: 10px;
+margin-top: 10px;
+        
+        img{
+            margin-right: 12px;
+        }
+a {
+   text-decoration: none;
+   color: $left-text-color;
+}
+a:hover{
+    color: white;
+}
+
+}
+    }
+.count>img:last-child{
+        margin-left: 10px;
+    }
+    p{
+        text-transform: uppercase;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        margin-left: 10px;
+    
+    }
+ 
+

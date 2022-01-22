@@ -1,0 +1,15 @@
+$left-background: #444c63;
+$left-text-color: #828dad;
+$left-count-color:#363e54;
+
+
+.flex { display: flex; }
+.justify-start { justify-content: flex-start; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.align-start { align-items: flex-start; }
+.align-center { align-items: center; }
+.align-end { align-items: flex-end; }
+.direction-column { flex-direction: column; }
+.direction-row{flex-direction: row;}
