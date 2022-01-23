@@ -8,10 +8,13 @@ body {
     justify-content: center;
     margin-top: 30px;
 }
+hr {
+    margin: 0;
+}
 
 main {
     width: 687px;
-    height: 590px;
+    height: 600px;
  
    
 background-color: white;
@@ -19,109 +22,10 @@ background-color: white;
 
 nav {
        height: 600px;
-    width: 145px;
+    width: 148px;
     background-color: $left-background;
 }
 
-.left {
- .logo>img {
-     margin-top: 10px;
- }
- img:nth-child(4){
-     margin-left: 5px ;
- }
-    .icon {
-        font-family: $font-family;
-        font-size: 12px;
-        margin-left: 10px;
-        margin-top: 10px;
-        
-        img{
-            margin-right: 12px;
-        }
-        a {
-        text-decoration: none;
-        color: $left-text-color;
-        }
-        a:hover{
-        color: white;
-        }
 
-    }
-    
-
-    .count>img:last-child{
-        margin-left: 10px;
-    }
-    p{
-        text-transform: uppercase;
-        color: white;
-        font-size: 13px;
-        font-weight: bold;
-        margin-left: 10px;
-    
-    }
- 
-
-}
-
-.main {
-    h2:nth-child(3){
-        color: $photos-color;
-        font-size: 20px;
-        font-weight: lighter;
-        margin-bottom: 25px;
-    }
-margin-left: 18px;
-    &>div {
-        margin-left: 15px;
-        margin-top: 15px;
-        input {
-            border: none;
-            
-        }
-        ::placeholder{
-            font-size: $search-font-size;
-            color: $search-color;
-        }
-    }
-   
-.account {
-   margin-right: 20px;
-  h2 {
-      margin: 0 15px 0 15px;
-  }
-  margin-bottom: 50px;
-}
-hr {
-   display: inline-block;
-    height: 2px;
-    width: 90%;
-  margin-left: 18px;
-    
-}
-
-.photos {
-
-    img {
-        cursor: pointer;
-    }
-     p {
-    margin-right: 25px;
-     }
-p:hover{
-    background-color: $left-background;
-    color: white;
-  
-}
-}
-}
-.image {
-    margin-left: 18px;
-   img {
-       margin-right: 10px;
-       margin-bottom: 40px;
-   }
-}
 
 

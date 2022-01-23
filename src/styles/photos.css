@@ -60,31 +60,60 @@
           flex-direction: row;
 }
 
-body {
-  background-image: url("../img/BG.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 30px;
+.photos img {
+  cursor: pointer;
+  margin-right: 13px;
 }
-
-hr {
-  margin: 0;
+.photos button {
+  margin-right: 15px;
+  border: none;
+  background-color: initial;
 }
-
-main {
-  width: 687px;
-  height: 600px;
-  background-color: white;
-}
-
-nav {
-  height: 600px;
-  width: 148px;
+.photos button:hover {
   background-color: #444c63;
+  color: white;
+  border-radius: 2px;
+}
+
+.image {
+  margin-left: 18px;
+}
+.image img {
+  margin-right: 10px;
+  margin-bottom: 40px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  border: 1px solid black;
+  background-color: #fff;
+  color: gray;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  right: -10px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
