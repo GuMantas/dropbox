@@ -32,6 +32,11 @@ function scss() {
         .pipe(concat("style.css"))
         .pipe(dest("dist"));
 }
+function js() {
+    return src("src/js/**.js")
+    .pipe(dest("dist"));
+}
+
 function pic() {
     return src("src/img/**.png").pipe(dest("dist/img"));
 }
@@ -61,11 +66,12 @@ function serve() {
     watch("src/styles/**.scss", series(scss)).on("change", sync.reload);
     // watch("src/js/**.js", series(jsmini)).on("change", sync.reload);
     watch("src/img/**.png", series(pic)).on("change", sync.reload);
+    watch("src/js/**.js", series(js)).on("change", sync.reload);
     // watch("src/img/section-2/**.{jpeg,jpg,gif,png}", series(section_2)).on(
     //     "change",
     //     sync.reload
     // );
 }
-exports.start = series(clear, html, scss, pic, serve);
-exports.reload = series(html, scss, pic, serve);
+exports.start = series( html, scss,js, pic, serve);
+exports.reload = series(html, scss, pic,js, serve);
 exports.delete = series(clear);

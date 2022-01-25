@@ -1,65 +1,26 @@
 @import 'variables.scss';
 
-.photos {
-
-    img {
-        cursor: pointer;
-        margin-right: 13px;
-    }
-     button {
-    margin-right:15px;
-    border: none;
-    background-color: initial;
-     }
-button:hover{
-    background-color: $left-background;
-    color: white;
-    border-radius: 2px;
+section {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-}
-
-.image {
+#image {
+display: flex;
+flex-wrap: wrap;
+margin: .5rem;
     margin-left: 18px;
+     margin: .5rem;
+     .photos {
+         display: flex;
+         flex-direction: column;
+     }
    img {
        margin-right: 10px;
-       margin-bottom: 40px;
+       margin-bottom: 10px;
    }
-}
-
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 60px;
-    border: 1px solid black;
-    background-color: $white-color;
-    color: gray;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    top: 150%;
-    right: -10px;
+   p {
     
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent black transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
+       font-size: 10px;
+   }
 }
