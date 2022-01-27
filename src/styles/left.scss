@@ -43,13 +43,16 @@
  position: absolute;
  bottom: -190%;
 display: inline-block;
-     p {
+     h3 {
          text-transform: uppercase;
          color: $white-color;
          margin-bottom: 10px;
          margin-left: 10px;
          margin-right: 30px;
          font-size: 13px;
+     }
+     progress {
+        width: 100%;    
      }
   &>img {
       float: right;
@@ -73,8 +76,3 @@ display: inline-block;
  }
 }
 
-.progress {
-    width: 95%;
-    margin-left: 10px;
-    background-color: $left-count-color !important;
-}

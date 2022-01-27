@@ -14,22 +14,27 @@
   <h2>Photos</h2>
   <div class="photos flex direction-row justify-between">
     <div>
-      <div class="tooltip">
-        <img src="../img/upload.png" alt="" />
-        <span class="tooltiptext">Upload</span>
+      <div>
+        <label class="custom-file-upload">
+          <input
+            id="file"
+            type="file"
+            accept="image/png image/jpg image/jpeg"
+            multiple
+          />
+        </label>
+
+        <button id="uploadBtn" type="button">Upload</button>
       </div>
 
-      <div class="tooltip">
+      <div data-toggle="tooltip" data-placment="bottom" title="testas">
         <img src="../img/newFolder.png" alt="" />
-        <span class="tooltiptext">New Folder</span>
       </div>
-      <div class="tooltip">
+      <div>
         <img src="../img/shareFolder.png" alt="" />
-        <span class="tooltiptext">Share Folder</span>
       </div>
-      <div class="tooltip">
+      <div>
         <img src="../img/delete.png" alt="" />
-        <span class="tooltiptext">Delete</span>
       </div>
     </div>
     <div class="flex align-end">

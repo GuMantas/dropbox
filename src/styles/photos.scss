@@ -11,11 +11,11 @@ flex-wrap: wrap;
 margin: .5rem;
     margin-left: 18px;
      margin: .5rem;
-     .photos {
+     .images {
          display: flex;
          flex-direction: column;
      }
-   img {
+   .img {
        margin-right: 10px;
        margin-bottom: 10px;
    }
@@ -23,4 +23,16 @@ margin: .5rem;
     
        font-size: 10px;
    }
+}
+
+.img {
+    height: 200px;
+    width: 200px;
+}
+.overflow-auto {
+    height: 360px;
+    
+}
+.container {
+    margin:0 !important;
 }
