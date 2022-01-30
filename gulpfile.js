@@ -40,23 +40,11 @@ function js() {
 function pic() {
     return src("src/img/**.png").pipe(dest("dist/img"));
 }
-// function section_2() {
-//     return src("src/img/section-2/**.{jpeg,jpg,gif,png}").pipe(
-//         dest("dist/img/section-2")
-//     );
-// }
+
 async function clear() {
     del("dist");
 }
-// function jsmini() {
-//     return src("src/js/*.js", "src/js/*.mjs")
-//         .pipe(
-//             minify({
-//                 noSource: true,
-//             })
-//         )
-//         .pipe(dest("dist/js"));
-// }
+
 function serve() {
     sync.init({
         server: "./dist",
@@ -64,13 +52,9 @@ function serve() {
     watch("src/**.html", series(html)).on("change", sync.reload);
     watch("src/parts/**.html", series(html)).on("change", sync.reload);
     watch("src/styles/**.scss", series(scss)).on("change", sync.reload);
-    // watch("src/js/**.js", series(jsmini)).on("change", sync.reload);
     watch("src/img/**.png", series(pic)).on("change", sync.reload);
     watch("src/js/**.js", series(js)).on("change", sync.reload);
-    // watch("src/img/section-2/**.{jpeg,jpg,gif,png}", series(section_2)).on(
-    //     "change",
-    //     sync.reload
-    // );
+
 }
 exports.start = series( html, scss,js, pic, serve);
 exports.reload = series(html, scss, pic,js, serve);
