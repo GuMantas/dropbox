@@ -24,6 +24,10 @@ function html() {
         )
         .pipe(dest("dist"));
 }
+function users(){
+    return src("src/parts/users.html")
+    .pipe(dest("dist"));
+}
 function scss() {
     return src("src/styles/**.scss")
         .pipe(sass())
@@ -56,6 +60,6 @@ function serve() {
     watch("src/js/**.js", series(js)).on("change", sync.reload);
 
 }
-exports.start = series( html, scss,js, pic, serve);
-exports.reload = series(html, scss, pic,js, serve);
+exports.start = series( html, users, scss,js, pic, serve);
+exports.reload = series(html, users, scss, pic,js, serve);
 exports.delete = series(clear);

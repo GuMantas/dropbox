@@ -5,11 +5,10 @@ let selectedItems = [];
 
 upload.onchange = function (e) {
     for (let i = 0; i < document.getElementById("uploadBtn")?.files.length; i++) {
-        const element = document.getElementById("uploadBtn")?.files[i];
+        const element = this?.files[i];
     images.push({
         name: element.name,
         size: element.size,
-        date: element.lastModifiedDate,
         path: URL.createObjectURL(element),
     });
 }
@@ -23,11 +22,10 @@ const render = (arr) => {
         const image = document.createElement("div");
         const h2 = document.createElement("h2");
         const h3 = document.createElement("h3");
-        const h4 = document.createElement("h4");
         const selectedDiv = document.createElement("div");
         h2.textContent = element.name;
         h3.textContent = `${convertBytes(element.size)} Mb`;
-        // h4.textContent = element.date;
+       
        
 
         imageItem.className = "uploaded";
@@ -36,7 +34,6 @@ const render = (arr) => {
         imageItem.appendChild(image);
         imageItem.appendChild(h2);
         imageItem.appendChild(h3);
-        imageItem.appendChild(h4);
         imageItem.setAttribute('id', index);
         selectedDiv.setAttribute('class', 'selected');
         imageItem.appendChild(selectedDiv);
